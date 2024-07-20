@@ -9,6 +9,7 @@ This repository contains the code and configuration for deploying applications u
 - Minikube installed
 - kubectl installed
 - Git installed
+- Clone the git repo
 
 ## Setup Instructions
 
@@ -24,16 +25,20 @@ minikube start
 ```sh
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
 
 ### 3. Access Argo CD UI
 ```sh
 kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
 
 ### 4.  Login to Argo CD
 ```sh
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode
+```
 
 ### 5. Apply the app-of-apps manifest
 ```sh
 kubectl apply -f app-of-apps.yaml
+```
 
