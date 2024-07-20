@@ -18,6 +18,7 @@ Start your Minikube cluster with the following command:
 
 ```sh
 minikube start
+```
 
 ### 2. Install Argo CD
 ```sh
