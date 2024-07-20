@@ -39,6 +39,6 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ### 5. Apply the app-of-apps manifest
 ```sh
-kubectl apply -f app-of-apps.yaml
+kubectl apply -f app-of-apps.yml
 ```
 
