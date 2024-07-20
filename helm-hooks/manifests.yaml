@@ -12,7 +12,7 @@ spec:
       containers:
         - name: upgrade-sql-schema
           image: alpine:latest
-          command: ["sleep", "5"]
+          command: ["sleep", "6"]
       restartPolicy: Never
 ---
 apiVersion: batch/v1
